@@ -6,6 +6,8 @@ void setup() {
   jel.resize(width,height);
   //COLOR INVERSION
   jel.filter(INVERT);
+  
+  jel.filter(pasterize, 16);
 }
 
 void draw() {
