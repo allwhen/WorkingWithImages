@@ -11,5 +11,6 @@ void setup() {
 
 void draw() {
   background(255,0,0);
+  //image in center
   image(img,width/2-img.width/2,height/2-img.height/2);
 }
