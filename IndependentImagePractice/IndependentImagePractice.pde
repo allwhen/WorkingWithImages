@@ -14,6 +14,7 @@ void setup() {
   img.mask(ant);
   im2 = loadImage("Hydrangeas.jpg");
   im2.resize(width,height);
+  //white hand and transparent from black on white
   han = loadImage("hand.png");
   han.filter(INVERT);
   han.mask(han);
@@ -33,7 +34,7 @@ void draw() {
   else {
     image(im2,0,0);
   }
-  
+  //artistic filter 
   filter(POSTERIZE,4);
   //write click number
   text(c,30,200);
@@ -45,6 +46,7 @@ void draw() {
     noCursor();
   }
   
+  //gives hand "cursor" after 16 clicks
   if (flag) {
      image(han,mouseX-han.width/2,mouseY-han.height/2);
   }
